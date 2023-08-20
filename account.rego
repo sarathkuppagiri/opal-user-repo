@@ -8,7 +8,7 @@
 # authorities: Granted authorities
 # headers: Request headers
 #
-package baeldung.auth.account
+package test.auth.account
 
 # Not authorized by default
 default authorized = false
