@@ -8,7 +8,7 @@
 # authorities: Granted authorities
 # headers: Request headers
 #
-package baeldung.auth.account
+package test.auth.account
 
 # Not authorized by default
 default authorized = false
@@ -37,7 +37,7 @@ allow["account_api_authorized"] {
     regex.match("^/account/.+",input.uri)
     parts := split(input.uri,"/")
     account := parts[2]
-    role := concat(":",[ "ROLE_account_test", "read", account] )
+    role := concat(":",[ "ROLE_account", "read", account] )
     role == input.authorities[i]
 }
 
